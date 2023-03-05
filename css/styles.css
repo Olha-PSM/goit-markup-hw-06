@@ -484,7 +484,7 @@ p,h1,h2,h3,h4,h5,h6 {
 }
 
 /* ----------PROJECT----------- */
-.visually-hidden {}
+
 
 
 .project-list {
@@ -659,7 +659,7 @@ p,h1,h2,h3,h4,h5,h6 {
  
 .footer-field {
    display: flex;
-   margin-bottom: 16px;
+   
    
 }
 
@@ -671,7 +671,7 @@ p,h1,h2,h3,h4,h5,h6 {
    border: 1px solid rgba(255, 255, 255, 0.3);
    background-color: transparent;
    color: var(--main-title-color);
-   outline: none;
+   
    padding-left: 16px;
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
@@ -747,10 +747,11 @@ p,h1,h2,h3,h4,h5,h6 {
    left: 50%;
    background-color: var(--modal-bg-color);
    border-radius: 4px;
+   padding: 24px;
    
    transform: translate(-50%, -50%) rotate(0deg);
    transition: transform 300ms linear;
-   padding: 24px;
+   
 
 }
 .backdrop.is-hidden .modal {
@@ -771,14 +772,17 @@ p,h1,h2,h3,h4,h5,h6 {
    color: #000000;
    box-shadow:var(--box-shadow-modal-btn);
    margin-bottom: 24px;
+   cursor: pointer;
    transition: background-color var(--transition-hover-focus), color var(--transition-hover-focus) ;
- }
+   
+}
+
  .modal-close-icon {
    fill: currentColor;
 }
 
 
-.modal-btn-close:focus{
+.modal-btn-close:is(:hover, :focus) {
    background-color: var(--accent-btn-bg-color);
    color: var(--main-btn-color);
 }
@@ -791,13 +795,14 @@ p,h1,h2,h3,h4,h5,h6 {
    line-height: 1.5;
    text-align: center;
    letter-spacing: 0.02em;
-   color: #2E2F42;
+   color: var(--second-title-color);
    margin-bottom: 16px;
 }
 .modal-field {
-   margin-bottom: 26px;
-
+   margin-bottom: 8px;
+   
 }
+
 .input-wrap {
    position: relative;
 }
@@ -827,6 +832,7 @@ p,h1,h2,h3,h4,h5,h6 {
    font-size: 12px;
    line-height: 1.17;
    letter-spacing: 0.01em;
+   margin-bottom: 4px;
    color: var(--main-customers-color);
 }
  
@@ -849,6 +855,8 @@ p,h1,h2,h3,h4,h5,h6 {
    padding: 8px 16px;
    outline: transparent;
    resize: none;
+   
+   
    transition: border-color var(--transition-hover-focus);
 }
 .modal-message::placeholder{
@@ -862,6 +870,8 @@ p,h1,h2,h3,h4,h5,h6 {
 .modal-message:focus {
    border-color: var(--accent-color);
  }
+
+ 
 
 .label-check {
    display: flex;
@@ -884,16 +894,19 @@ p,h1,h2,h3,h4,h5,h6 {
    fill: transparent;
   
 }
+.modal-textarea {
+   margin-bottom: 16px;
+}
 .input-check:checked + .label-check .modal-check-icon {
    border: none;
    background-color: var(--accent-btn-bg-color) ;
    fill:var(--secondary-btn-bg-color);
 }
 .policy-text {
-font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.04em;
-color: var(--main-modal-text);
+   font-size: 12px;
+   line-height: 1.17;
+   letter-spacing: 0.04em;
+   color: var(--main-modal-text);
 }
 
 .policy-link { 
@@ -912,7 +925,10 @@ color: var(--main-modal-text);
    display: block;
    padding: 16px 32px;
    margin: 0 auto;
+   margin-top: 24px;
    border: none;
+   cursor: pointer;
+   
 
    color: var(--main-btn-color);
    background: var(--primary-btn-bg-color);
@@ -924,4 +940,5 @@ color: var(--main-modal-text);
  .modal-button:is(:hover, :focus) {
    background-color: var(--accent-btn-bg-color);
  }
-      
+ 
+
